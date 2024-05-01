@@ -1,0 +1,74 @@
+2º Procedimento | Página de Receitas Dinâmica
+
+- Crie uma página com o nome "receitas.html", no ambiente de edição;
+
+- Defina a estrutura básica da página, digitando html seguido de CTRL + Espaço, e
+  selecionando a opção HTML:5;
+
+- Modifique o conteúdo do arquivo para obter as seguintes características:
+
+    a) Alterar a linguagem para pt-br
+
+    b) Incluir a folha de estilos do Bootstrap
+
+    c) Incluir o título "Catálogo de Receitas"
+
+    d) Definir a área principal como container-fluid
+
+    e) Utilizar fundo bg-warning
+
+    f) Definir uma div com apresentação no modo flex-wrap, identificada como
+       pnlCatalogo, para apresentação dos painéis para as receitas
+
+    g) Acrescentar um trecho em Java Script
+
+    h) Organizar os dados de receitas em um vetor de elementos JSON, com os campos
+       título, imagem, preparo e ingredientes, onde este último é um vetor de elementos texto
+
+    i) Definir as funções getListaIngredientes e getCard, ambos com parâmetro
+       receita, relacionados à estrutura adotada no segmento JSON
+
+    j) Definir a função preencheCatalogo, sem parâmetros, invocada no evento onload
+       do elemento body
+
+- Acrescente as imagens das receitas, preferencialmente no formato PNG, para
+  posterior exibição nos painéis;
+
+  - Implemente a função getListaIngredientes, para geração da lista em HTML:
+    a) Iniciar a lista em uma variável texto com a tag ul
+
+    b) Utilizar map e reduce, sobre o campo ingredientes da receita, para obter a
+       representação como itens de lista, baseados na tag li, concatenando na variável de
+       texto
+
+    c) Finalizar concatenando o fechamento de ul e retornando a lista HTML
+
+- Implemente a função getCard, para geração do painel da receita:
+    a) Utilizar substituição direta, com o texto entre sinais de crase
+
+    b) Definir, no texto de retorno, uma div com classe card e largura de 250px
+
+    c) Incluir uma imagem, com a classe card-img-top, tendo como origem o campo
+       imagem da receita
+
+    d) Incluir uma div com classe card-body, referente ao corpo do painel
+
+    e) Adicionar um título ao corpo, utilizando o campo titulo da receita, e classe card-
+       title para formatação
+
+    f) Adicionar uma div com classe card-text ao corpo, apresentando a lista de
+       ingredientes, obtida via getListaIngredientes, um separador hr e texto do campo
+       preparo da receita
+
+- Implemente a função preencheCatalogo, para exibição do conjunto de receitas na
+  página, ao nível da div pnlCatalogo
+    a) Capturar o elemento pnlCatalogo através de getElementById
+
+    b) Através de map e reduce, obter o texto HTML para os painéis de receita,
+       formatados com base na função getCard, a partir do vetor JSON
+
+    c) Alterar o innerHTML de pnlCatalogo para o texto HTML gerado
+
+- Ajuste as características para obter uma página como o exemplo abaixo:
+
+- Por fim, verifique os resultados obtidos através de um navegador.
